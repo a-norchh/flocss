@@ -1,0 +1,34 @@
+@mixin fill-area {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin check {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Media query
+@mixin for-tablet {
+  @media screen and (max-width: 48em) {
+    @content;
+  }
+}
+
+@mixin for-mobile {
+  @media screen and (max-width: 36em) {
+    @content;
+  }
+}
